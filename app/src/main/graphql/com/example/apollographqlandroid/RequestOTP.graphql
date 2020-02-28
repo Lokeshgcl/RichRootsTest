@@ -1,0 +1,3 @@
+query requestOtp($hash: String!, $phone: String!) {
+  requestOtp(hash: $hash, phone: $phone)
+}

@@ -1,0 +1,7 @@
+mutation loginOrRegister($phone: String!,$otp: String!,$lang: String!,$latitude: Float!,$longitude: Float!) {
+loginOrRegister(phone: $phone,otp: $otp,lang: $lang,latitude: $latitude,longitude: $longitude){
+    sessionToken,
+    name,
+    placeName
+    }
+}
