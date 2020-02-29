@@ -1,4 +1,4 @@
-package com.example.richroots.ViewModel;
+package com.example.apollotestproj.ui.VM;
 
 public class ItemCenterVM {
     private String ProductName;

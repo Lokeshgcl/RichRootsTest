@@ -1,24 +1,18 @@
-package com.example.richroots.Adapter;
+package com.example.apollotestproj.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.richroots.Model.ItemDetail;
-import com.example.richroots.R;
-import com.example.richroots.ViewModel.ItemCenterVM;
-import com.squareup.picasso.OkHttpDownloader;
-import com.squareup.picasso.Picasso;
+import com.example.apollotestproj.R;
+import com.example.apollotestproj.ui.VM.ItemCenterVM;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.RecyclerViewHolder> {
@@ -46,10 +40,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.RecyclerVi
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         View view = holder.linearLayout;
         ImageView icon = (ImageView) view.findViewById(R.id.itemImage);
-        Picasso.with(this.context)
-                .load("https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg")
-                .placeholder(R.drawable.fruits)
-                .into(icon);
+//        Picasso.with(this.context)
+//                .load("https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg")
+//                .placeholder(R.drawable.fruits)
+//                .into(icon);
         ItemCenterVM item = lstItemCenterVM.get(position);
         TextView price = (TextView) view.findViewById(R.id.txtPrice);
         price.setText(item.getMinPrice() + " to " + item.getMaxPrice());
